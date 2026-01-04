@@ -5,11 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Home - Audiobook Factory</title>
 <style>
+/* 核心样式 */
 body { margin: 0; background: #f4f6f8; font-family: -apple-system, sans-serif; }
 a { text-decoration: none; color: inherit; }
 .ab-app { max-width: 600px; margin: 0 auto; background: #fff; min-height: 100vh; display: flex; flex-direction: column; }
+
+/* 顶部导航优化 */
 .ab-nav { background: #fff; padding: 15px 20px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 999; }
 .ab-brand { color: #ff6600; font-weight: 800; font-size: 18px; }
+.nav-link { font-size: 14px; font-weight: bold; color: #333; padding: 5px 10px; border-radius: 4px; transition: background 0.2s; }
+.nav-link:hover { background: #f0f0f0; color: #ff6600; }
+
+/* 搜索框样式 */
+.search-box { margin: 20px 15px 5px 15px; position: relative; }
+.search-input { width: 100%; padding: 12px 15px 12px 40px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 25px; font-size: 15px; background: #f9f9f9; transition: border 0.2s; }
+.search-input:focus { border-color: #ff6600; outline: none; background: #fff; }
+.search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #999; font-size: 16px; }
+
+/* 网格与卡片 */
 .ab-grid { display: flex; flex-wrap: wrap; padding: 15px; gap: 15px; align-content: flex-start; }
 .ab-col { width: calc(50% - 8px); }
 .ab-card-box { display:flex; flex-direction:column; background:#fff; border:1px solid #eee; border-radius:8px; overflow:hidden; }
@@ -18,9 +31,11 @@ a { text-decoration: none; color: inherit; }
 .ab-body { padding:10px; }
 .ab-title { font-size:13px; font-weight:bold; height:34px; overflow:hidden; }
 .ab-btn-text { font-size:11px; color:#ff6600; font-weight:bold; margin-top:5px; }
+
+/* 按钮与页脚 */
 .page-btn { background:#fff; border:1px solid #ddd; padding:8px 16px; border-radius:20px; }
 .ab-footer { background: #f9f9f9; border-top: 1px solid #eee; padding: 30px 20px; text-align: center; margin-top: auto; }
-.ab-footer-links a { color: #666; font-size: 12px; margin: 0 8px; }
+.ab-footer-links a { color: #666; font-size: 12px; margin: 0 8px; font-weight: 500; }
 .ab-copyright { font-size: 11px; color: #ccc; margin-top: 20px; }
 </style>
 </head>
@@ -28,15 +43,25 @@ a { text-decoration: none; color: inherit; }
 <div class="ab-app">
     <div class="ab-nav">
         <div><a href="https://amptech.dpdns.org" class="ab-brand">🎧 Audiobook Factory</a></div>
-        <div style="color:#333;">☰</div>
+        <div>
+            <a href="https://amptech.dpdns.org" class="nav-link">Home</a>
+            <a href="https://amptech.dpdns.org/about/" class="nav-link">About</a>
+        </div>
     </div>
-    <div style="padding:20px 15px 5px 15px;">
-        <h2 style="margin:0; font-size:20px; color:#222;">Library</h2>
-        <p style="margin:5px 0 0 0; font-size:13px; color:#666;">2026 Best Collection</p>
+
+    <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search books...">
     </div>
-    <div class="ab-grid">
-    <div class="ab-col">
-        <a href="https://amptech.dpdns.org/atomic-habits-tamil/" class="ab-card-box">
+
+    <div style="padding:10px 15px 0 15px;">
+        <h2 style="margin:0; font-size:18px; color:#222;">Library</h2>
+        <p style="margin:5px 0 0 0; font-size:12px; color:#666;">2026 Best Collection</p>
+    </div>
+
+    <div class="ab-grid" id="bookGrid">
+        
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/atomic-habits-tamil/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=WmqyDwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="Atomic Habits">
@@ -49,8 +74,7 @@ a { text-decoration: none; color: inherit; }
         </a>
     </div>
     
-    <div class="ab-col">
-        <a href="https://amptech.dpdns.org/the-psychology-of-money/" class="ab-card-box">
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/the-psychology-of-money/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=5HrrDwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="The Psychology of Money">
@@ -63,8 +87,7 @@ a { text-decoration: none; color: inherit; }
         </a>
     </div>
     
-    <div class="ab-col">
-        <a href="https://amptech.dpdns.org/rich-dad-poor-dad-what-the-rich-teach-their-kids-about-money/" class="ab-card-box">
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/rich-dad-poor-dad-what-the-rich-teach-their-kids-about-money/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=kRqeDwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="Rich Dad Poor Dad - What the Rich Teach Their Kids About Money">
@@ -77,8 +100,7 @@ a { text-decoration: none; color: inherit; }
         </a>
     </div>
     
-    <div class="ab-col">
-        <a href="https://amptech.dpdns.org/the-48-laws-of-power/" class="ab-card-box">
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/the-48-laws-of-power/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=P_zMW3EHnTEC&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="The 48 Laws Of Power">
@@ -91,8 +113,7 @@ a { text-decoration: none; color: inherit; }
         </a>
     </div>
     
-    <div class="ab-col">
-        <a href="https://amptech.dpdns.org/how-to-win-friends-and-influence-people/" class="ab-card-box">
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/how-to-win-friends-and-influence-people/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=hCf-DwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="How to Win Friends?and Influence People">
@@ -105,8 +126,7 @@ a { text-decoration: none; color: inherit; }
         </a>
     </div>
     
-    <div class="ab-col">
-        <a href="https://amptech.dpdns.org/think-and-grow-rich/" class="ab-card-box">
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/think-and-grow-rich/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=27jMAAAACAAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="Think and Grow Rich!">
@@ -119,8 +139,7 @@ a { text-decoration: none; color: inherit; }
         </a>
     </div>
     
-    <div class="ab-col">
-        <a href="https://amptech.dpdns.org/the-7-habits-of-highly-effective-people/" class="ab-card-box">
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/the-7-habits-of-highly-effective-people/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=upUxaNWSaRIC&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="The 7 Habits of Highly Effective People">
@@ -133,8 +152,7 @@ a { text-decoration: none; color: inherit; }
         </a>
     </div>
     
-    <div class="ab-col">
-        <a href="https://amptech.dpdns.org/cant-hurt-me/" class="ab-card-box">
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/cant-hurt-me/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=IeYmEAAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="Can't Hurt Me">
@@ -147,8 +165,7 @@ a { text-decoration: none; color: inherit; }
         </a>
     </div>
     
-    <div class="ab-col">
-        <a href="https://amptech.dpdns.org/sapiens/" class="ab-card-box">
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/sapiens/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=FmyBAwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="Sapiens">
@@ -161,8 +178,7 @@ a { text-decoration: none; color: inherit; }
         </a>
     </div>
     
-    <div class="ab-col">
-        <a href="https://amptech.dpdns.org/educated/" class="ab-card-box">
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/educated/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=2ObWDgAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="Educated">
@@ -175,8 +191,7 @@ a { text-decoration: none; color: inherit; }
         </a>
     </div>
     
-    <div class="ab-col">
-        <a href="https://amptech.dpdns.org/becoming/" class="ab-card-box">
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/becoming/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=hi17DwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="Becoming">
@@ -189,8 +204,7 @@ a { text-decoration: none; color: inherit; }
         </a>
     </div>
     
-    <div class="ab-col">
-        <a href="https://amptech.dpdns.org/start-with-why/" class="ab-card-box">
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/start-with-why/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=iyw6ul1x_n8C&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="Start with Why">
@@ -202,11 +216,45 @@ a { text-decoration: none; color: inherit; }
             </div>
         </a>
     </div>
+    
     </div>
+    
+    <div id="noResults" style="display:none; text-align:center; padding:40px; color:#999;">
+        No books found matching your search.
+    </div>
+
     <div style="padding-bottom:30px;"><div class="ab-pagination" style="margin-top:30px; display:flex; gap:10px; justify-content:center;"><span class="page-info" style="line-height: 36px; color:#666;">Page <b>1</b> of 2</span><a href="/page/2/" class="page-btn">Next →</a></div></div>
+
     <div class="ab-footer">
-        <div class="ab-footer-links"><a href="https://amptech.dpdns.org">Home</a> • <a href="https://amptech.dpdns.org/about/">About</a></div>
+        <div class="ab-footer-links">
+            <a href="https://amptech.dpdns.org">Home</a> • 
+            <a href="https://amptech.dpdns.org/about/">About</a> • 
+            <a href="https://amptech.dpdns.org/contact/">Contact</a> • 
+            <a href="https://amptech.dpdns.org/privacy/">Privacy</a>
+        </div>
         <div class="ab-copyright">© 2026 Audiobook Factory.</div>
     </div>
 </div>
+
+<script>
+document.getElementById('searchInput').addEventListener('keyup', function() {
+    let filter = this.value.toUpperCase();
+    let items = document.querySelectorAll('.search-item');
+    let visibleCount = 0;
+
+    items.forEach(function(item) {
+        let title = item.querySelector('.ab-title').innerText;
+        if (title.toUpperCase().indexOf(filter) > -1) {
+            item.style.display = "";
+            visibleCount++;
+        } else {
+            item.style.display = "none";
+        }
+    });
+
+    // 控制无结果提示
+    document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+});
+</script>
+
 </body></html>
