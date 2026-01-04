@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://amptech.dpdns.org/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url><loc>https://amptech.dpdns.org/</loc><lastmod>2026-01-04T02:41:51+00:00</lastmod></url>
 	<url><loc>https://amptech.dpdns.org/about/</loc><lastmod>2026-01-03T16:59:10+00:00</lastmod></url>
 	<url><loc>https://amptech.dpdns.org/contact/</loc><lastmod>2026-01-03T16:59:13+00:00</lastmod></url>
 	<url><loc>https://amptech.dpdns.org/privacy/</loc><lastmod>2026-01-03T16:59:16+00:00</lastmod></url>
-
 	<url><loc>https://amptech.dpdns.org/atomic-habits-tamil/</loc><lastmod>2026-01-04T01:03:58+00:00</lastmod></url>
 	<url><loc>https://amptech.dpdns.org/ego-is-the-enemy/</loc><lastmod>2026-01-03T17:00:12+00:00</lastmod></url>
 	<url><loc>https://amptech.dpdns.org/deep-work/</loc><lastmod>2026-01-03T17:00:09+00:00</lastmod></url>
