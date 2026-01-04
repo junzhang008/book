@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home - Page 3</title>
+<style>
+/* 核心样式 */
+body { margin: 0; background: #f4f6f8; font-family: -apple-system, sans-serif; }
+a { text-decoration: none; color: inherit; }
+.ab-app { max-width: 600px; margin: 0 auto; background: #fff; min-height: 100vh; display: flex; flex-direction: column; }
+
+/* 顶部导航优化 */
+.ab-nav { background: #fff; padding: 15px 20px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 999; }
+.ab-brand { color: #ff6600; font-weight: 800; font-size: 18px; }
+.nav-link { font-size: 14px; font-weight: bold; color: #333; padding: 5px 10px; border-radius: 4px; transition: background 0.2s; }
+.nav-link:hover { background: #f0f0f0; color: #ff6600; }
+
+/* 搜索框样式 */
+.search-box { margin: 20px 15px 5px 15px; position: relative; }
+.search-input { width: 100%; padding: 12px 15px 12px 40px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 25px; font-size: 15px; background: #f9f9f9; transition: border 0.2s; }
+.search-input:focus { border-color: #ff6600; outline: none; background: #fff; }
+.search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #999; font-size: 16px; }
+
+/* 网格与卡片 */
+.ab-grid { display: flex; flex-wrap: wrap; padding: 15px; gap: 15px; align-content: flex-start; }
+.ab-col { width: calc(50% - 8px); }
+.ab-card-box { display:flex; flex-direction:column; background:#fff; border:1px solid #eee; border-radius:8px; overflow:hidden; }
+.ab-img-wrap { height:220px; background:#f0f0f0; position:relative; }
+.ab-img-wrap img { width:100%; height:100%; object-fit:cover; }
+.ab-body { padding:10px; }
+.ab-title { font-size:13px; font-weight:bold; height:34px; overflow:hidden; }
+.ab-btn-text { font-size:11px; color:#ff6600; font-weight:bold; margin-top:5px; }
+
+/* 按钮与页脚 */
+.page-btn { background:#fff; border:1px solid #ddd; padding:8px 16px; border-radius:20px; }
+.ab-footer { background: #f9f9f9; border-top: 1px solid #eee; padding: 30px 20px; text-align: center; margin-top: auto; }
+.ab-footer-links a { color: #666; font-size: 12px; margin: 0 8px; font-weight: 500; }
+.ab-copyright { font-size: 11px; color: #ccc; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="ab-app">
+    <div class="ab-nav">
+        <div><a href="https://amptech.dpdns.org" class="ab-brand">🎧 Audiobook Factory</a></div>
+        <div>
+            <a href="https://amptech.dpdns.org" class="nav-link">Home</a>
+            <a href="https://amptech.dpdns.org/about/" class="nav-link">About</a>
+        </div>
+    </div>
+
+    <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search books...">
+    </div>
+
+    <div style="padding:10px 15px 0 15px;">
+        <h2 style="margin:0; font-size:18px; color:#222;">Library (Page 3)</h2>
+        <p style="margin:5px 0 0 0; font-size:12px; color:#666;">2026 Best Collection</p>
+    </div>
+
+    <div class="ab-grid" id="bookGrid">
+        
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/steve-jobs/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=XUf-KtNv8IgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Steve Jobs">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Steve Jobs</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/influence/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=5dfv0HJ1TEoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Influence">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Influence</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/thinking--fast-and-slow/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=ZuKTvERuPG8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Thinking  Fast and Slow">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Thinking  Fast and Slow</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/mans-search-for-meaning/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=W3q8R4dRZTwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Man's Search For Meaning">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Man's Search For Meaning</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/extreme-ownership/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=RNA3DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Extreme Ownership">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Extreme Ownership</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/never-split-the-difference/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=RmdqCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Never Split the Difference">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Never Split the Difference</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/the-4-hour-work-week/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=n4XOGCawpJsC&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="The 4-Hour Work Week">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">The 4-Hour Work Week</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/grit-hbr-emotional-intelligence-series/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=Xh2rEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Grit (HBR Emotional Intelligence Series)">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Grit (HBR Emotional Intelligence Series)</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/dare-to-lead/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=oFhbDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Dare to Lead">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Dare to Lead</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/originals/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=9R3ZCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Originals">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Originals</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/quiet/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=uNMjeFMorPgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Quiet">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Quiet</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/daring-greatly/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=cyRDrMMX8WoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Daring Greatly">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Daring Greatly</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    </div>
+    
+    <div id="noResults" style="display:none; text-align:center; padding:40px; color:#999;">
+        No books found matching your search.
+    </div>
+
+    <div style="padding-bottom:30px;"><div class="ab-pagination" style="margin-top:30px; display:flex; gap:10px; justify-content:center;"><a href="/page/2/" class="page-btn">← Prev</a><span class="page-info" style="line-height: 36px; color:#666;">Page <b>3</b> of 5</span><a href="/page/4/" class="page-btn">Next →</a></div></div>
+
+    <div class="ab-footer">
+        <div class="ab-footer-links">
+            <a href="https://amptech.dpdns.org">Home</a> • 
+            <a href="https://amptech.dpdns.org/about/">About</a> • 
+            <a href="https://amptech.dpdns.org/contact/">Contact</a> • 
+            <a href="https://amptech.dpdns.org/privacy/">Privacy</a>
+        </div>
+        <div class="ab-copyright">© 2026 Audiobook Factory.</div>
+    </div>
+</div>
+
+<script>
+document.getElementById('searchInput').addEventListener('keyup', function() {
+    let filter = this.value.toUpperCase();
+    let items = document.querySelectorAll('.search-item');
+    let visibleCount = 0;
+
+    items.forEach(function(item) {
+        let title = item.querySelector('.ab-title').innerText;
+        if (title.toUpperCase().indexOf(filter) > -1) {
+            item.style.display = "";
+            visibleCount++;
+        } else {
+            item.style.display = "none";
+        }
+    });
+
+    // 控制无结果提示
+    document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+});
+</script>
+
+</body></html>

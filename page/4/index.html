@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home - Page 4</title>
+<style>
+/* 核心样式 */
+body { margin: 0; background: #f4f6f8; font-family: -apple-system, sans-serif; }
+a { text-decoration: none; color: inherit; }
+.ab-app { max-width: 600px; margin: 0 auto; background: #fff; min-height: 100vh; display: flex; flex-direction: column; }
+
+/* 顶部导航优化 */
+.ab-nav { background: #fff; padding: 15px 20px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 999; }
+.ab-brand { color: #ff6600; font-weight: 800; font-size: 18px; }
+.nav-link { font-size: 14px; font-weight: bold; color: #333; padding: 5px 10px; border-radius: 4px; transition: background 0.2s; }
+.nav-link:hover { background: #f0f0f0; color: #ff6600; }
+
+/* 搜索框样式 */
+.search-box { margin: 20px 15px 5px 15px; position: relative; }
+.search-input { width: 100%; padding: 12px 15px 12px 40px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 25px; font-size: 15px; background: #f9f9f9; transition: border 0.2s; }
+.search-input:focus { border-color: #ff6600; outline: none; background: #fff; }
+.search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #999; font-size: 16px; }
+
+/* 网格与卡片 */
+.ab-grid { display: flex; flex-wrap: wrap; padding: 15px; gap: 15px; align-content: flex-start; }
+.ab-col { width: calc(50% - 8px); }
+.ab-card-box { display:flex; flex-direction:column; background:#fff; border:1px solid #eee; border-radius:8px; overflow:hidden; }
+.ab-img-wrap { height:220px; background:#f0f0f0; position:relative; }
+.ab-img-wrap img { width:100%; height:100%; object-fit:cover; }
+.ab-body { padding:10px; }
+.ab-title { font-size:13px; font-weight:bold; height:34px; overflow:hidden; }
+.ab-btn-text { font-size:11px; color:#ff6600; font-weight:bold; margin-top:5px; }
+
+/* 按钮与页脚 */
+.page-btn { background:#fff; border:1px solid #ddd; padding:8px 16px; border-radius:20px; }
+.ab-footer { background: #f9f9f9; border-top: 1px solid #eee; padding: 30px 20px; text-align: center; margin-top: auto; }
+.ab-footer-links a { color: #666; font-size: 12px; margin: 0 8px; font-weight: 500; }
+.ab-copyright { font-size: 11px; color: #ccc; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="ab-app">
+    <div class="ab-nav">
+        <div><a href="https://amptech.dpdns.org" class="ab-brand">🎧 Audiobook Factory</a></div>
+        <div>
+            <a href="https://amptech.dpdns.org" class="nav-link">Home</a>
+            <a href="https://amptech.dpdns.org/about/" class="nav-link">About</a>
+        </div>
+    </div>
+
+    <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search books...">
+    </div>
+
+    <div style="padding:10px 15px 0 15px;">
+        <h2 style="margin:0; font-size:18px; color:#222;">Library (Page 4)</h2>
+        <p style="margin:5px 0 0 0; font-size:12px; color:#666;">2026 Best Collection</p>
+    </div>
+
+    <div class="ab-grid" id="bookGrid">
+        
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/make-your-bed/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=4XDZDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Make Your Bed">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Make Your Bed</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/digital-minimalism/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=1eGCDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Digital Minimalism">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Digital Minimalism</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/zero-to-one-million/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=Et4KAAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="Zero to One Million">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Zero to One Million</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/hooked/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=dsz5AwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Hooked">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Hooked</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/measure-what-matters/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=u2NDDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Measure What Matters">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Measure What Matters</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/the-lean-startup/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=tvfyz-4JILwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="The Lean Startup">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">The Lean Startup</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/tools-of-titans/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=M77RDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Tools of Titans">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Tools of Titans</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/essentialism/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=q-QdEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Essentialism">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Essentialism</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/talking-to-strangers/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=VnuGDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Talking to Strangers">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Talking to Strangers</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/the-story-of-david-and-goliath/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=DMnYAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="The Story of David and Goliath">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">The Story of David and Goliath</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/unlimited-power/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=__CvAFrcWY0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Unlimited Power">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Unlimited Power</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="ab-col search-item"> <a href="https://amptech.dpdns.org/awaken-the-giant-within/" class="ab-card-box">
+            <div class="ab-img-wrap">
+                <div class="ab-badge">FREE</div>
+                <img decoding="async" src="https://books.google.com/books/content?id=iPpyLpX0Y1sC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="Awaken The Giant Within">
+                <div class="ab-play-icon">▶</div>
+            </div>
+            <div class="ab-body">
+                <div class="ab-title">Awaken The Giant Within</div>
+                <div class="ab-btn-text">DOWNLOAD</div>
+            </div>
+        </a>
+    </div>
+    
+    </div>
+    
+    <div id="noResults" style="display:none; text-align:center; padding:40px; color:#999;">
+        No books found matching your search.
+    </div>
+
+    <div style="padding-bottom:30px;"><div class="ab-pagination" style="margin-top:30px; display:flex; gap:10px; justify-content:center;"><a href="/page/3/" class="page-btn">← Prev</a><span class="page-info" style="line-height: 36px; color:#666;">Page <b>4</b> of 5</span><a href="/page/5/" class="page-btn">Next →</a></div></div>
+
+    <div class="ab-footer">
+        <div class="ab-footer-links">
+            <a href="https://amptech.dpdns.org">Home</a> • 
+            <a href="https://amptech.dpdns.org/about/">About</a> • 
+            <a href="https://amptech.dpdns.org/contact/">Contact</a> • 
+            <a href="https://amptech.dpdns.org/privacy/">Privacy</a>
+        </div>
+        <div class="ab-copyright">© 2026 Audiobook Factory.</div>
+    </div>
+</div>
+
+<script>
+document.getElementById('searchInput').addEventListener('keyup', function() {
+    let filter = this.value.toUpperCase();
+    let items = document.querySelectorAll('.search-item');
+    let visibleCount = 0;
+
+    items.forEach(function(item) {
+        let title = item.querySelector('.ab-title').innerText;
+        if (title.toUpperCase().indexOf(filter) > -1) {
+            item.style.display = "";
+            visibleCount++;
+        } else {
+            item.style.display = "none";
+        }
+    });
+
+    // 控制无结果提示
+    document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+});
+</script>
+
+</body></html>
