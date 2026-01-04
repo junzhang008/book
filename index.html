@@ -1,75 +1,34 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home - Audiobook Factory</title>
-    <link rel="canonical" href="https://amptech.dpdns.org/">
-    <meta name="description" content="2026 Best Audiobooks Library">
-    
-    <style>
-    /* 基础重置 */
-    body { margin: 0; background: #f4f6f8; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    a { text-decoration: none; color: inherit; }
-    
-    /* 容器 */
-    .ab-app { max-width: 600px; margin: 0 auto; background: #fff; min-height: 100vh; display: flex; flex-direction: column; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
-    
-    /* 导航 */
-    .ab-nav { background: #fff; padding: 15px 20px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 999; }
-    .ab-brand { color: #ff6600; font-weight: 800; font-size: 18px; }
-    
-    /* 网格布局 */
-    .ab-grid { display: flex; flex-wrap: wrap; padding: 15px; gap: 15px; flex: 1; }
-    .ab-col { width: calc(50% - 8px); box-sizing: border-box; }
-    
-    /* 卡片样式 */
-    .ab-card-box { background: #fff; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 3px 8px rgba(0,0,0,0.08); border: 1px solid #eee; transition: transform 0.2s; }
-    .ab-card-box:hover { transform: translateY(-3px); }
-    
-    .ab-img-wrap { width: 100%; height: 220px; position: relative; background: #f0f0f0; overflow: hidden; }
-    .ab-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
-    
-    .ab-badge { position: absolute; top: 8px; left: 8px; background: #ff6600; color: white; font-size: 10px; padding: 3px 6px; border-radius: 3px; font-weight: bold; }
-    .ab-play-icon { position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6); color: white; width: 24px; height: 24px; border-radius: 50%; text-align: center; line-height: 24px; font-size: 12px; }
-    
-    .ab-body { padding: 10px; text-align: left; }
-    .ab-title { font-size: 13px; font-weight: 700; color: #333; margin: 0 0 5px 0; height: 34px; line-height: 1.3; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-    .ab-btn-text { font-size: 11px; color: #ff6600; font-weight: bold; text-transform: uppercase; }
-    
-    /* 分页样式 */
-    .ab-pagination { padding: 20px; text-align: center; border-top: 1px solid #eee; display: flex; justify-content: center; gap: 15px; align-items: center; }
-    .page-btn { background: #fff; border: 1px solid #ddd; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; color: #555; }
-    .page-btn:hover { background: #ff6600; color: #fff; border-color: #ff6600; }
-    .page-info { font-size: 13px; color: #999; }
-
-    /* Footer */
-    .ab-footer { background: #f9f9f9; border-top: 1px solid #eee; padding: 30px 20px; text-align: center; margin-top: auto; }
-    .ab-footer-links a { color: #666; font-size: 12px; margin: 0 8px; }
-    .ab-top-btn { display: inline-block; margin-top: 20px; padding: 8px 20px; background-color: #f0f0f0; color: #666; font-size: 12px; border-radius: 20px; border: 1px solid #ddd; cursor: pointer; }
-    .ab-copyright { font-size: 11px; color: #ccc; margin-top: 20px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audiobook Library</title>
+<style>
+/* 简化的 CSS */
+body { margin: 0; background: #f4f6f8; font-family: sans-serif; }
+a { text-decoration: none; color: inherit; }
+.ab-app { max-width: 600px; margin: 0 auto; background: #fff; min-height: 100vh; display: flex; flex-direction: column; }
+.ab-grid { display: flex; flex-wrap: wrap; padding: 15px; gap: 15px; }
+.ab-col { width: calc(50% - 8px); }
+.ab-card-box { display:flex; flex-direction:column; background:#fff; border:1px solid #eee; border-radius:8px; overflow:hidden; }
+.ab-img-wrap { height:220px; background:#eee; position:relative; }
+.ab-img-wrap img { width:100%; height:100%; object-fit:cover; }
+.ab-body { padding:10px; }
+.ab-title { font-size:13px; font-weight:bold; height:34px; overflow:hidden; }
+.ab-btn-text { font-size:11px; color:#ff6600; font-weight:bold; margin-top:5px; }
+.page-btn { background:#fff; border:1px solid #ddd; padding:8px 16px; border-radius:20px; }
+</style>
 </head>
 <body>
-
 <div class="ab-app">
-    <div class="ab-nav">
-        <div>
-            <a href="https://amptech.dpdns.org" class="ab-brand">🎧 Audiobook Factory</a><br>
-            <span style="font-size:11px; background:#f0f0f0; padding:3px 6px; border-radius:4px; color:#666;">Library</span>
-        </div>
-        <div style="color:#333;">☰</div>
+    <div style="padding:15px; border-bottom:1px solid #eee;">
+        <b style="color:#ff6600;">🎧 AudioFactory</b>
+        <span style="color:#999; font-size:12px; margin-left:10px;">Page 1</span>
     </div>
-
-    <div style="padding:20px 15px 5px 15px;">
-        <h2 style="margin:0; font-size:20px; color:#222;">Library</h2>
-        <p style="margin:5px 0 0 0; font-size:13px; color:#666;">2026 Best Collection</p>
-    </div>
-
     <div class="ab-grid">
-        
     <div class="ab-col">
-        <a href="https://amptech.dpdns.org/atomic-habits-tamil/" class="ab-card-box">
+        <a href="/atomic-habits-tamil/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=WmqyDwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="Atomic Habits">
@@ -83,7 +42,7 @@
     </div>
     
     <div class="ab-col">
-        <a href="https://amptech.dpdns.org/the-psychology-of-money/" class="ab-card-box">
+        <a href="/the-psychology-of-money/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=5HrrDwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="The Psychology of Money">
@@ -97,7 +56,7 @@
     </div>
     
     <div class="ab-col">
-        <a href="https://amptech.dpdns.org/rich-dad-poor-dad-what-the-rich-teach-their-kids-about-money/" class="ab-card-box">
+        <a href="/rich-dad-poor-dad-what-the-rich-teach-their-kids-about-money/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=kRqeDwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="Rich Dad Poor Dad - What the Rich Teach Their Kids About Money">
@@ -111,7 +70,7 @@
     </div>
     
     <div class="ab-col">
-        <a href="https://amptech.dpdns.org/the-48-laws-of-power/" class="ab-card-box">
+        <a href="/the-48-laws-of-power/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=P_zMW3EHnTEC&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="The 48 Laws Of Power">
@@ -125,7 +84,7 @@
     </div>
     
     <div class="ab-col">
-        <a href="https://amptech.dpdns.org/how-to-win-friends-and-influence-people/" class="ab-card-box">
+        <a href="/how-to-win-friends-and-influence-people/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=hCf-DwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="How to Win Friends?and Influence People">
@@ -139,7 +98,7 @@
     </div>
     
     <div class="ab-col">
-        <a href="https://amptech.dpdns.org/think-and-grow-rich/" class="ab-card-box">
+        <a href="/think-and-grow-rich/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=27jMAAAACAAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="Think and Grow Rich!">
@@ -153,7 +112,7 @@
     </div>
     
     <div class="ab-col">
-        <a href="https://amptech.dpdns.org/the-7-habits-of-highly-effective-people/" class="ab-card-box">
+        <a href="/the-7-habits-of-highly-effective-people/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=upUxaNWSaRIC&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="The 7 Habits of Highly Effective People">
@@ -167,7 +126,7 @@
     </div>
     
     <div class="ab-col">
-        <a href="https://amptech.dpdns.org/cant-hurt-me/" class="ab-card-box">
+        <a href="/cant-hurt-me/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=IeYmEAAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="Can't Hurt Me">
@@ -181,7 +140,7 @@
     </div>
     
     <div class="ab-col">
-        <a href="https://amptech.dpdns.org/sapiens/" class="ab-card-box">
+        <a href="/sapiens/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=FmyBAwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="Sapiens">
@@ -195,7 +154,7 @@
     </div>
     
     <div class="ab-col">
-        <a href="https://amptech.dpdns.org/educated/" class="ab-card-box">
+        <a href="/educated/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=2ObWDgAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="Educated">
@@ -209,7 +168,7 @@
     </div>
     
     <div class="ab-col">
-        <a href="https://amptech.dpdns.org/becoming/" class="ab-card-box">
+        <a href="/becoming/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=hi17DwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="Becoming">
@@ -223,7 +182,7 @@
     </div>
     
     <div class="ab-col">
-        <a href="https://amptech.dpdns.org/start-with-why/" class="ab-card-box">
+        <a href="/start-with-why/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
                 <img decoding="async" src="https://books.google.com/books/content?id=iyw6ul1x_n8C&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="Start with Why">
@@ -235,22 +194,7 @@
             </div>
         </a>
     </div>
-    
     </div>
-
-    <div class="ab-pagination"><span class="page-info">Page 1 of 2</span><a href="/page/2/" class="page-btn">Next →</a></div>
-
-    <div class="ab-footer">
-        <div class="ab-footer-links">
-            <a href="https://amptech.dpdns.org">Home</a> • 
-            <a href="https://amptech.dpdns.org/about/">About</a> • 
-            <a href="https://amptech.dpdns.org/contact/">Contact</a> • 
-            <a href="https://amptech.dpdns.org/privacy/">Privacy</a>
-        </div>
-        <div onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="ab-top-btn">↑ Back to Top</div>
-        <div class="ab-copyright">© 2026 Audiobook Factory.</div>
-    </div>
+    <div style="padding-bottom:30px;"><div class="ab-pagination" style="margin-top:30px; display:flex; gap:10px; justify-content:center;"><span class="page-info" style="line-height: 36px; color:#666;">Page <b>1</b> of 2</span><a href="/page/2/" class="page-btn">Next →</a></div></div>
 </div>
-
-</body>
-</html>
+</body></html>
