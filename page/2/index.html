@@ -3,35 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Audiobook Library - Page 2</title>
+<title>Home - Page 2</title>
 <style>
-/* 简化的 CSS */
-body { margin: 0; background: #f4f6f8; font-family: sans-serif; }
+body { margin: 0; background: #f4f6f8; font-family: -apple-system, sans-serif; }
 a { text-decoration: none; color: inherit; }
 .ab-app { max-width: 600px; margin: 0 auto; background: #fff; min-height: 100vh; display: flex; flex-direction: column; }
-.ab-grid { display: flex; flex-wrap: wrap; padding: 15px; gap: 15px; }
+.ab-nav { background: #fff; padding: 15px 20px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 999; }
+.ab-brand { color: #ff6600; font-weight: 800; font-size: 18px; }
+.ab-grid { display: flex; flex-wrap: wrap; padding: 15px; gap: 15px; align-content: flex-start; }
 .ab-col { width: calc(50% - 8px); }
 .ab-card-box { display:flex; flex-direction:column; background:#fff; border:1px solid #eee; border-radius:8px; overflow:hidden; }
-.ab-img-wrap { height:220px; background:#eee; position:relative; }
+.ab-img-wrap { height:220px; background:#f0f0f0; position:relative; }
 .ab-img-wrap img { width:100%; height:100%; object-fit:cover; }
 .ab-body { padding:10px; }
 .ab-title { font-size:13px; font-weight:bold; height:34px; overflow:hidden; }
 .ab-btn-text { font-size:11px; color:#ff6600; font-weight:bold; margin-top:5px; }
 .page-btn { background:#fff; border:1px solid #ddd; padding:8px 16px; border-radius:20px; }
+.ab-footer { background: #f9f9f9; border-top: 1px solid #eee; padding: 30px 20px; text-align: center; margin-top: auto; }
+.ab-footer-links a { color: #666; font-size: 12px; margin: 0 8px; }
+.ab-copyright { font-size: 11px; color: #ccc; margin-top: 20px; }
 </style>
 </head>
 <body>
 <div class="ab-app">
-    <div style="padding:15px; border-bottom:1px solid #eee;">
-        <b style="color:#ff6600;">🎧 AudioFactory</b>
-        <span style="color:#999; font-size:12px; margin-left:10px;">Page 2</span>
+    <div class="ab-nav">
+        <div><a href="https://amptech.dpdns.org" class="ab-brand">🎧 Audiobook Factory</a></div>
+        <div style="color:#333;">☰</div>
+    </div>
+    <div style="padding:20px 15px 5px 15px;">
+        <h2 style="margin:0; font-size:20px; color:#222;">Library (Page 2)</h2>
+        <p style="margin:5px 0 0 0; font-size:13px; color:#666;">2026 Best Collection</p>
     </div>
     <div class="ab-grid">
     <div class="ab-col">
-        <a href="/good-to-great/" class="ab-card-box">
+        <a href="https://amptech.dpdns.org/good-to-great/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
-                <img decoding="async" src="https://books.google.com/books/content?id=7io-2eqxSS0C&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="Good to Great">
+                <img decoding="async" src="https://books.google.com/books/content?id=7io-2eqxSS0C&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="Good to Great">
                 <div class="ab-play-icon">▶</div>
             </div>
             <div class="ab-body">
@@ -42,10 +50,10 @@ a { text-decoration: none; color: inherit; }
     </div>
     
     <div class="ab-col">
-        <a href="/outliers/" class="ab-card-box">
+        <a href="https://amptech.dpdns.org/outliers/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
-                <img decoding="async" src="https://books.google.com/books/content?id=ialrgIT41OAC&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="Outliers">
+                <img decoding="async" src="https://books.google.com/books/content?id=ialrgIT41OAC&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="Outliers">
                 <div class="ab-play-icon">▶</div>
             </div>
             <div class="ab-body">
@@ -56,10 +64,10 @@ a { text-decoration: none; color: inherit; }
     </div>
     
     <div class="ab-col">
-        <a href="/the-power-of-habit/" class="ab-card-box">
+        <a href="https://amptech.dpdns.org/the-power-of-habit/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
-                <img decoding="async" src="https://books.google.com/books/content?id=O1MInVXd_aoC&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="The Power of Habit">
+                <img decoding="async" src="https://books.google.com/books/content?id=O1MInVXd_aoC&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="The Power of Habit">
                 <div class="ab-play-icon">▶</div>
             </div>
             <div class="ab-body">
@@ -70,10 +78,10 @@ a { text-decoration: none; color: inherit; }
     </div>
     
     <div class="ab-col">
-        <a href="/mindset/" class="ab-card-box">
+        <a href="https://amptech.dpdns.org/mindset/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
-                <img decoding="async" src="https://books.google.com/books/content?id=bOGHDQAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="Mindset">
+                <img decoding="async" src="https://books.google.com/books/content?id=bOGHDQAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="Mindset">
                 <div class="ab-play-icon">▶</div>
             </div>
             <div class="ab-body">
@@ -84,10 +92,10 @@ a { text-decoration: none; color: inherit; }
     </div>
     
     <div class="ab-col">
-        <a href="/the-subtle-art-of-not-giving-a-fck/" class="ab-card-box">
+        <a href="https://amptech.dpdns.org/the-subtle-art-of-not-giving-a-fck/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
-                <img decoding="async" src="https://books.google.com/books/content?id=yng_CwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="The Subtle Art of Not Giving a F*ck">
+                <img decoding="async" src="https://books.google.com/books/content?id=yng_CwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="The Subtle Art of Not Giving a F*ck">
                 <div class="ab-play-icon">▶</div>
             </div>
             <div class="ab-body">
@@ -98,10 +106,10 @@ a { text-decoration: none; color: inherit; }
     </div>
     
     <div class="ab-col">
-        <a href="/zero-to-one/" class="ab-card-box">
+        <a href="https://amptech.dpdns.org/zero-to-one/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
-                <img decoding="async" src="https://books.google.com/books/content?id=POOJDQAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="Zero to One">
+                <img decoding="async" src="https://books.google.com/books/content?id=POOJDQAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="Zero to One">
                 <div class="ab-play-icon">▶</div>
             </div>
             <div class="ab-body">
@@ -112,10 +120,10 @@ a { text-decoration: none; color: inherit; }
     </div>
     
     <div class="ab-col">
-        <a href="/deep-work/" class="ab-card-box">
+        <a href="https://amptech.dpdns.org/deep-work/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
-                <img decoding="async" src="https://books.google.com/books/content?id=4QTzCAAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="Deep Work">
+                <img decoding="async" src="https://books.google.com/books/content?id=4QTzCAAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="Deep Work">
                 <div class="ab-play-icon">▶</div>
             </div>
             <div class="ab-body">
@@ -126,10 +134,10 @@ a { text-decoration: none; color: inherit; }
     </div>
     
     <div class="ab-col">
-        <a href="/ego-is-the-enemy/" class="ab-card-box">
+        <a href="https://amptech.dpdns.org/ego-is-the-enemy/" class="ab-card-box">
             <div class="ab-img-wrap">
                 <div class="ab-badge">FREE</div>
-                <img decoding="async" src="https://books.google.com/books/content?id=8cSZDwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" loading="lazy" alt="EGO IS THE ENEMY">
+                <img decoding="async" src="https://books.google.com/books/content?id=8cSZDwAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="EGO IS THE ENEMY">
                 <div class="ab-play-icon">▶</div>
             </div>
             <div class="ab-body">
@@ -140,5 +148,9 @@ a { text-decoration: none; color: inherit; }
     </div>
     </div>
     <div style="padding-bottom:30px;"><div class="ab-pagination" style="margin-top:30px; display:flex; gap:10px; justify-content:center;"><a href="/" class="page-btn">← Prev</a><span class="page-info" style="line-height: 36px; color:#666;">Page <b>2</b> of 2</span></div></div>
+    <div class="ab-footer">
+        <div class="ab-footer-links"><a href="https://amptech.dpdns.org">Home</a> • <a href="https://amptech.dpdns.org/about/">About</a></div>
+        <div class="ab-copyright">© 2026 Audiobook Factory.</div>
+    </div>
 </div>
 </body></html>
