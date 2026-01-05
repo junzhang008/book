@@ -6,36 +6,83 @@
     <title>About Us - FillYouEar Audio</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
-        .nav { padding: 20px 0; border-bottom: 1px solid #eee; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center; }
-        .brand { font-weight: bold; font-size: 1.2rem; color: #e65100; text-decoration: none; }
-        .nav a { color: #666; text-decoration: none; margin-left: 15px; }
-        h1 { font-size: 2rem; margin-bottom: 20px; text-align: center; }
-        .content { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .footer { text-align: center; margin-top: 50px; color: #999; font-size: 0.9rem; }
-        .footer a { color: #666; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f9f9f9; }
+        
+        /* 顶部导航 (复刻 Home) */
+        .navbar { background: white; border-bottom: 1px solid #eee; padding: 15px 0; }
+        .nav-container { max-width: 800px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .brand { font-weight: bold; font-size: 1.2rem; color: #e65100; text-decoration: none; display: flex; align-items: center; }
+        .nav-links a { color: #555; text-decoration: none; margin-left: 20px; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #e65100; }
+
+        /* 内容区域 */
+        .main-container { max-width: 800px; margin: 40px auto; padding: 0 20px; min-height: 60vh; }
+        .content-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        
+        h1 { font-size: 2rem; margin-top: 0; margin-bottom: 25px; color: #222; }
+        h2 { font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; color: #333; }
+        p { margin-bottom: 15px; color: #444; line-height: 1.7; }
+        ul { margin-bottom: 15px; padding-left: 20px; color: #444; }
+        li { margin-bottom: 8px; }
+
+        /* 强调框 */
+        .highlight-box { background: #fff3e0; border-left: 4px solid #ff9900; padding: 15px; margin: 20px 0; border-radius: 4px; }
+        
+        /* 底部 (复刻 Home) */
+        .footer { text-align: center; margin-top: 50px; padding: 40px 0; color: #999; font-size: 0.9rem; border-top: 1px solid #eee; background: white; }
+        .footer a { color: #666; text-decoration: none; margin: 0 10px; }
+        .footer a:hover { color: #e65100; }
+        .disclaimer { font-size: 0.8rem; color: #bbb; margin-top: 15px; max-width: 600px; margin-left: auto; margin-right: auto; }
     </style>
 </head>
 <body>
-    <div class="nav">
+
+<div class="navbar">
+    <div class="nav-container">
         <a href="https://fillyouear.com" class="brand">🎧 FillYouEar Audio</a>
-        <div>
+        <div class="nav-links">
             <a href="https://fillyouear.com">Home</a>
+            <a href="https://fillyouear.com/about/">About</a>
         </div>
     </div>
-    <div class="content">
+</div>
 
-        <h1>About Us</h1>
-        <p>Welcome to <strong>FillYouEar Audio</strong>.</p>
-        <p>We are dedicated to providing high-quality summaries and insights from the world's best non-fiction books.</p>
+<div class="main-container">
+    <div class="content-card">
+
+    <h1>About Us</h1>
+    <p>Welcome to <strong>FillYouEar Audio</strong>, your go-to destination for discovering the world's most impactful non-fiction books through audio.</p>
     
+    <p>In today's fast-paced world, finding the time to read can be challenging. We believe that knowledge should be accessible to everyone, regardless of their schedule. That's why we curate a vast collection of audiobooks, summaries, and reviews focusing on business, self-improvement, psychology, and wealth creation.</p>
+    
+    <h2>Our Mission</h2>
+    <p>Our mission is simple: <strong>To help you learn faster.</strong></p>
+    <p>Whether you are commuting, working out, or relaxing at home, our platform helps you:</p>
+    <ul>
+        <li>Discover hidden gems and bestsellers.</li>
+        <li>Access key insights from industry leaders.</li>
+        <li>Make informed decisions before purchasing full audiobooks.</li>
+    </ul>
+    
+    <div class="highlight-box">
+        <strong>Note:</strong> We are an independent review site. While we provide objective analysis and summaries, we may earn a commission when you purchase books through our links, at no extra cost to you.
     </div>
-    <div class="footer">
+
+    </div>
+</div>
+
+<div class="footer">
+    <div style="margin-bottom: 15px;">
         <a href="https://fillyouear.com">Home</a> • 
-        <a href="https://fillyouear.com/about/">About</a> • 
+        <a href="https://fillyouear.com/about/">About Us</a> • 
         <a href="https://fillyouear.com/contact/">Contact</a> • 
-        <a href="https://fillyouear.com/privacy/">Privacy</a>
-        <p>© 2026 FillYouEar Audio. All rights reserved.</p>
+        <a href="https://fillyouear.com/privacy/">Privacy Policy</a>
     </div>
+    <div>© 2026 FillYouEar Audio. All rights reserved.</div>
+    <div class="disclaimer">
+        FillYouEar Audio is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+    </div>
+</div>
+
 </body>
 </html>
